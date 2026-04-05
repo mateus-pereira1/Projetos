@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+
+main{
+    display: flex;
+    margin: auto;
+    background-color: red;
+    width: 25em;
+    height: 16em;
+    text-align: center;
+    border-radius: 1.8em;
+    padding: 15px;
+}
+
+div{
+    margin: auto;
+    align-items: center;
+    width: 23em;
+    padding: 15px;
+}
+
+#display{
+    font-size: 4em;
+}
+
+p{
+    font-size: 1.5em;
+}
