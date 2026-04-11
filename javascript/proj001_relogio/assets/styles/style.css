@@ -1,14 +1,47 @@
+:root{
+    --corDeFundo: #fff;
+    --corTexto: #137918e7;
+    --corDisplay: rgba(27, 26, 26, 0.925);
+}
+
+body.dark-theme{
+    --corDeFundo: rgba(27, 26, 26, 0.925);
+    --corTexto: #000;
+    --corDisplay: #fff;
+}
+
 body{
     display: flex;
-    align-items: center;
     height: 100vh;
-
+    flex-direction: column;
+    background-color: var(--corDeFundo);
+    color: var(--corTexto);
 }
+
+header{
+    align-self: flex-end;
+}
+
+header > button{
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    background: none;
+    border: none;
+}
+
+img{
+    width: 3em;
+    height: 3em;
+    margin: auto;
+}
+
+
 
 main{
     display: flex;
     margin: auto;
-    background-color: red;
+    background-color: var(--corDisplay);
     width: 25em;
     height: 16em;
     text-align: center;

@@ -2,6 +2,9 @@
 let display = window.document.getElementById("display");
 let saudacao = window.document.getElementById("saudacao");
 let data = window.document.getElementById("data");
+let toggleButton = window.document.getElementById("toggleButton");
+let imagem = window.document.getElementById("imagem");
+let escolhaTema = false;
 
 //Variáveis para os dias da semana e os meses
 let diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
@@ -63,4 +66,21 @@ function mostraSaudacao(hora){
     } else{
         return saudacao.innerText = `Boa noite!`;
     }
+}
+
+//FUnção que adiciona botão para troca de tema entre claro e escuro
+function tema(){
+
+    if( escolhaTema === false){
+        imagem.src = "assets/images/brilho.png";
+        
+        document.body.classList.add('dark-theme');
+        escolhaTema = true;
+    } else{
+        document.body.classList.remove('dark-theme');
+        imagem.src = "assets/images/forma-de-fase-da-lua-crescente-com-duas-estrelas.png";
+        escolhaTema = false;
+    }
+    
+    
 }
