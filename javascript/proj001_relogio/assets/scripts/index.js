@@ -5,6 +5,8 @@ let data = window.document.getElementById("data");
 let toggleButton = window.document.getElementById("toggleButton");
 let imagem = window.document.getElementById("imagem");
 let escolhaTema = false;
+let formatar = false;
+let formatarHoras = window.document.getElementById("formatarHoras");
 
 //Variáveis para os dias da semana e os meses
 let diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
@@ -38,10 +40,13 @@ function formataHora(hour12){
 
 //Função que usa as horas formatadas
 function mostraHoras(){
-    let formatar = true;
     const data = new Date();
-    
     return formataHora(formatar).format(data);
+    
+}
+
+function formatacaoHoras(){
+    formatar = !formatar;
 }
 
 //Função que mostra a data por extenso
@@ -73,7 +78,6 @@ function tema(){
 
     if( escolhaTema === false){
         imagem.src = "assets/images/brilho.png";
-        
         document.body.classList.add('dark-theme');
         escolhaTema = true;
     } else{

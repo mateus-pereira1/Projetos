@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'displaySeteSeg';
+    src: url('/assets/fonts/seteSegmentos/SevenSegment.ttf');
+}
+
 :root{
     --corDeFundo: #fff;
     --corTexto: #137918e7;
@@ -10,12 +15,14 @@ body.dark-theme{
     --corDisplay: #fff;
 }
 
+
 body{
     display: flex;
     height: 100vh;
     flex-direction: column;
     background-color: var(--corDeFundo);
     color: var(--corTexto);
+    font-family: 'displaySeteSeg';
 }
 
 header{
@@ -28,7 +35,23 @@ header > button{
     margin: 1em;
     background: none;
     border: none;
+
 }
+
+.btn-formatar {
+    background-color: var(--corDisplay);
+    color: var(--corTexto);
+    border: 2px solid var(--corTexto);
+    font-family: 'displaySeteSeg', sans-serif;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
 
 img{
     width: 3em;
